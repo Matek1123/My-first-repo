@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Używamy obrazu Python jako podstawy
 FROM python:3.12-slim
 
@@ -15,3 +16,22 @@ EXPOSE 8080
 
 # Uruchamiamy serwer (zmieniamy polecenie uruchamiania na to, które chcesz)
 CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+=======
+# Dockerfile
+FROM python:3.12-slim
+
+# Ustaw katalog roboczy
+WORKDIR /app
+
+# Kopiuj kod MCP
+COPY . .
+
+# Instalacja zależności
+RUN pip install --no-cache-dir mcp
+
+# Otwórz port 8080
+EXPOSE 8080
+
+# Uruchom serwer
+CMD ["python", "server.py"]
+>>>>>>> b578f07 (Dodanie MCP i plików terminala)
