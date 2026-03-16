@@ -1,0 +1,5 @@
+mcpServers:
+  - url: http://localhost:8000/call  # Twój lokalny serwer MCP
+    name: "My Local MCP Server"
+    timeout: 30
+    maxRetries: 5
